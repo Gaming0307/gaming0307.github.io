@@ -6,6 +6,7 @@ header {
     width: 100%;
     margin: 0 0%;
     position:fixed;
+    height:5%;
 }
 body {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("https://www.iclub-informatique.fr/wp-content/uploads/2020/07/iclub-informatique-slider-scaled.jpg");
