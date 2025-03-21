@@ -37,6 +37,9 @@ body {
     height: 100%;
     float: left;
 }
+.button{
+    padding: 0 10%;
+}
 a svg{
     width: 5%;
 }
