@@ -1,61 +1,63 @@
 header {
-    background-color: rgb(139, 139, 139);
+    background-color: white;
+    border-radius: 0% 0% 30% 30%;
+    border-color: black;
     padding: 1%;
     text-align: center;
     font-size: 1.5em;
     width: 100%;
-    margin: 0 0%;
-    position:fixed;
-    height:13%;
+    margin: 0;
+    position: fixed;
+    height: 100px;
 }
+
 body {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("https://www.iclub-informatique.fr/wp-content/uploads/2020/07/iclub-informatique-slider-scaled.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    margin: 0;
-    height: 100vh;
+    margin: 0; 
 }
+
 #menu {
     margin: 0 5%;
     width: 90%;
-    height:90%;
+    height: 100%;
     background-color: rgb(255, 255, 255);
-}
-#menu #porte{
-    text-align: center;
-    width: 15%;
-    background-color: red;
-    height: 100%;
-    float: left;
-}
-#menu #nom{
-    text-align: center;
-    width: 40%;
-    background-color: rgb(234, 0, 255);
-    height: 100%;
-    float: left;
-}
-.button{
-    padding: 0 10%;
-}
-a svg{
-    width: 5%;
-}
-nav {
-    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-nav a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
+#menu #porte, #menu #nom {
+    text-align: center;
 }
 
-#div{
+#menu #navigation {
+    width: 35%;
+    display: flex;
+    justify-content: space-around;
+    align-items: top;
+}
+
+.bouton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.bouton svg {
+    width: 50px;
+    height: 50px;
+}
+
+#div {
     background-color: white;
     margin: 0 10%;
-    height: 1000px;
+    min-height: 1000px;
+}
+p{
+    margin: 0;
 }
