@@ -52,11 +52,22 @@ body {
     height: 50px;
 }
 
-#div {
+main {
     background-color: white;
-    margin: 0 10%;
+    margin: 0% 10%;
     min-height: 1000px;
+}
+#presentation{
+    color: white;
+}
+#pre{
+    margin-top: 30%;
+    text-align: center;
+    margin: 30% 15% 0 15% ;
 }
 p{
     margin: 0;
+}
+#test{
+    margin-top: 100000px;
 }
