@@ -67,9 +67,37 @@ main {
     text-align: center;
     margin: 0% 15% 0 15% ;
 }
+#realisation{
+    color: white;
+    margin-bottom: 10%;
+}
+#real{
+    display: flex;
+}
+#entreprise{
+    color: white;
+    margin-bottom: 10%;
+}
+#entre{
+    display: flex;
+    margin: 0% 10%;
+}
 p{
     margin: 0;
 }
 #test{
     margin-top: 100000px;
 }
+#navigation a{
+    text-decoration: none;
+    color: black;
+}
+#navigation a div:hover{
+    border-color: black;
+    border-radius: 1%;
+    border-width: 100px;
+}
+#entre #logo{
+    width: 100%;
+}
+#logo img{width: 100%;}
