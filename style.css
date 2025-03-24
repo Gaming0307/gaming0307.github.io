@@ -34,7 +34,7 @@ body {
 }
 
 #menu #navigation {
-    width: 35%;
+    width: 40%;
     display: flex;
     justify-content: space-around;
     align-items: top;
@@ -91,11 +91,6 @@ p{
 #navigation a{
     text-decoration: none;
     color: black;
-}
-#navigation a div:hover{
-    border-color: black;
-    border-radius: 1%;
-    border-width: 100px;
 }
 #entre #logo{
     width: 100%;
