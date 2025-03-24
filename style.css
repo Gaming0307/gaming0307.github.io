@@ -56,14 +56,16 @@ main {
     background-color: white;
     margin: 0% 10%;
     min-height: 1000px;
+    display: flex;
+    flex-direction: column;
 }
 #presentation{
     color: white;
+    margin-bottom: 30%;
 }
 #pre{
-    margin-top: 30%;
     text-align: center;
-    margin: 30% 15% 0 15% ;
+    margin: 0% 15% 0 15% ;
 }
 p{
     margin: 0;
