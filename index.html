@@ -54,15 +54,87 @@
             <h2>Je m'appelle Sullivan Delettrez étudiant au Lycée Henri Wallon en BTS SIO (services informatiques aux organisations) option SISR (solutions d'infrastructure, systèmes et réseaux)</h2>
         </div>
         <div style="margin-top: 30%;" id="entreprise"></div>
-        <h1 style="border: 2px black solid;border-radius: 25%;width: 60%;padding: 5%;background-color:white;text-align:center;font-size: 50px;margin: 0;">Stages en entreprise</h1>
-        <h2 style="border: 2px black solid;border-radius: 10%; padding:1%;width: 50%;background-color:white;text-align: center;font-size: 40px; margin: 0;">stage realisé durant ma formation</h2>
+        <h1 style="border: 1px black solid;border-radius: 10px;width: 60%;padding: 5%;text-align:center;font-size: 50px;margin: 0;">Stages en entreprise</h1>
+        <h2 style="border: 1px black solid;border-radius: 10px; padding:1%;width: 50%;text-align: center;font-size: 40px; margin: 0;">stage realisé durant ma formation</h2>
         <div id="entre">
-            <a style="width: 35%;" href="https://neoteams.io"><div id="logo"><img src="neoteams_logo.jpg" ></div></a>
-            <div style="width: 65%;text-align: left;font-size: 1.5vw;"><p><b>NEOTEAMS.IO</b> est une entreprise informatique proposant différents services tels que l'IA, l'infogérance, et un atelier communautaire. Travaillant en étroite collaboration avec des entreprises locales et présentes en France, en Afrique, en Nouvelle-Calédonie</p></div>
+            <a style="width: 35%;" href="https://neoteams.io"><div id="logo"><img src="neoteams_logo.jpg" style="border-radius: 1000px;" ></div></a>
+            <div style="width: 50%;text-align: left;font-size: 1.5vw;"><p><b>NEOTEAMS.IO</b> est une entreprise informatique proposant différents services tels que l'IA, l'infogérance, et un atelier communautaire. Travaillant en étroite collaboration avec des entreprises locales et présentes en France, en Afrique, en Nouvelle-Calédonie</p></div>
         </div>
         <p id="realisation">s</p>
-        <div id="real"></div>
+        <div id="real" style="display: flex;flex-direction: column;width: 100%;align-items: center;">
+            <div style="display: flex;flex-direction:row;align-items: center;">
+
+                <!--les <<"bouton">> à sulli-->
+                <a href="#real" id="supervision" class="cat" data-box="box1"><div class="categorie"><h3>Mise en place supervision</h3></div></a>
+                <a href="#real" id="logs" class="cat" data-box="box2"><div class="categorie"><h3>Centralisation de logs</h3></div></a>
+                <a href="#real" id="dns" class="cat" data-box="box3"><div class="categorie"><h3>Ajout d'enregistrement dns</h3></div></a>
+            </div>
+            <div style="display: flex;flex-direction:row;align-items: center;">
+                <a href="#real" id="proxy" class="cat" data-box="box4"><div class="categorie"><h3>Mise en place reverse proxy</h3></div></a>
+                <a href="#real" id="collabora" class="cat" data-box="box5"><div class="categorie"><h3>Mise en place collabora pour nextcloud</h3></div></a>
+                <a href="#real" id="presence" class="cat" data-box="box6"><div class="categorie"><h3>Presence en ligne de l'entreprise</h3></div></a>
+            </div>
+
+                <div id="box1" class="content-box">
+                    <h2>Mise en place supervision</h2>
+                    <div>
+                        <div></div>
+                        <div></div>
+                    </div>
+
+                </div>
+        
+                <div id="box2" class="content-box">
+                    <h2>Centralisation de logs</h2>
+                    
+
+                </div>
+        
+                <div id="box3" class="content-box">
+                    <h2>Ajout d'enregistrement dns</h2>
+                    
+
+                </div>
+
+                <div id="box4" class="content-box">
+                    <h2>Mise en place reverse proxy</h2>
+                    
+
+                </div>
+
+                <div id="box5" class="content-box">
+                    <h2>Mise en place collabora pour nextcloud</h2>
+                    
+
+                </div>
+
+                <div id="box6" class="content-box">
+                    <h2>Presence en ligne de l'entreprise</h2>
+                    
+
+                </div>
+            
+        </div>
         <p id="test">test</p>
     </main>
+    
+    <script>
+        document.querySelectorAll('.cat').forEach(a => {
+            a.addEventListener('click', (e) => {
+                e.preventDefault();
+                // Masquer toutes les boîtes
+                document.querySelectorAll('.content-box').forEach(box => {
+                    box.style.display = 'none';
+                });
+
+                // Afficher la boîte correspondante
+                const boxId = a.getAttribute('data-box');
+                const activeBox = document.getElementById(boxId);
+                activeBox.style.display = 'block';
+            });
+        });
+    </script>
+
+
 </body>
 </html>
