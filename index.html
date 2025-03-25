@@ -76,49 +76,87 @@
             </div>
 
                 <div id="box1" class="content-box">
-                    <h2>Mise en place supervision</h2>
-                    <div>
-                        <div></div>
-                        <div></div>
+                    <div id="contenu1" >
+                        <h2>Mise en place supervision</h2>
+                        
                     </div>
+                    
+                    <div id="contenuAvancer1" class="detail-box">
+                        <h2>Mise en place supervision</h2>
 
+                    </div>
+                    
+                    <button class="detailButton" onclick="switchContenu(1)" >bouton test</button>
                 </div>
-        
+
                 <div id="box2" class="content-box">
-                    <h2>Centralisation de logs</h2>
+                    <div id="contenu2">
+                        <h2>Centralisation de logs</h2>
+                    </div>
                     
-
+                    <div id="contenuAvancer2" class="detail-box">
+                        <h2>Centralisation de logs</h2>
+                    </div>
+                    
+                    <button class="detailButton" onclick="switchContenu(2)">bouton test</button>
                 </div>
-        
-                <div id="box3" class="content-box">
-                    <h2>Ajout d'enregistrement dns</h2>
-                    
 
+                <div id="box3" class="content-box">
+                    <div id="contenu3">
+                        <h2>Ajout d'enregistrement dns</h2>
+                    </div>
+                    
+                    <div id="contenuAvancer3" class="detail-box">
+                        <h2>Ajout d'enregistrement dns</h2>
+                    </div>
+                    
+                    <button class="detailButton" onclick="switchContenu(3)">bouton test</button>
                 </div>
 
                 <div id="box4" class="content-box">
-                    <h2>Mise en place reverse proxy</h2>
+                    <div id="contenu4">
+                        <h2>Mise en place reverse proxy</h2>
+                    </div>
                     
-
+                    <div id="contenuAvancer4" class="detail-box">
+                        <h2>Mise en place reverse proxy</h2>
+                    </div>
+                    
+                    <button class="detailButton" onclick="switchContenu(4)">bouton test</button>
                 </div>
 
                 <div id="box5" class="content-box">
-                    <h2>Mise en place collabora pour nextcloud</h2>
+                    <div id="contenu5">
+                        <h2>Mise en place collabora pour nextcloud</h2>
+                    </div>
                     
-
+                    <div id="contenuAvancer5" class="detail-box">
+                        <h2>Mise en place collabora pour nextcloud</h2>
+                    </div>
+                    
+                    <button class="detailButton" onclick="switchContenu(5)">bouton test</button>
                 </div>
 
                 <div id="box6" class="content-box">
-                    <h2>Presence en ligne de l'entreprise</h2>
+                    <div id="contenu6">
+                        <h2>Presence en ligne de l'entreprise</h2>
+                    </div>
                     
-
+                    <div id="contenuAvancer6" class="detail-box">
+                        <h2>Presence en ligne de l'entreprise</h2>
+                    </div>
+                    
+                    <button class="detailButton" onclick="switchContenu(6)">bouton test</button>
                 </div>
+                
+            </div>
             
         </div>
         <p id="test">test</p>
     </main>
     
     <script>
+
         document.querySelectorAll('.cat').forEach(a => {
             a.addEventListener('click', (e) => {
                 e.preventDefault();
@@ -133,6 +171,20 @@
                 activeBox.style.display = 'block';
             });
         });
+
+        function switchContenu(numeroContenu){
+                            var contenu = document.getElementById("contenu" + numeroContenu);
+                            var contenuAvancer = document.getElementById("contenuAvancer" + numeroContenu);
+
+                            if (contenu.style.display === "none") {
+                                contenu.style.display = "block";
+                                contenuAvancer.style.display = "none";
+                            } else {
+                                contenu.style.display = "none";
+                                contenuAvancer.style.display = "block";
+                            }
+                        }
+
     </script>
 
 
