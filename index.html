@@ -70,13 +70,12 @@
 
                 <!--les <<"bouton">> à sulli-->
                 <a href="#real" id="supervision" class="cat" data-box="box1"><div class="categorie"><h3>Mise en place supervision</h3></div></a>
-                <a href="#real" id="logs" class="cat" data-box="box2"><div class="categorie"><h3>Centralisation de logs</h3></div></a>
-                <a href="#real" id="dns" class="cat" data-box="box3"><div class="categorie"><h3>Ajout d'enregistrement dns</h3></div></a>
+                <a href="#real" id="dns" class="cat" data-box="box2"><div class="categorie"><h3>Ajout d'enregistrement dns</h3></div></a>
             </div>
             <div style="display: flex;flex-direction:row;align-items: center;">
-                <a href="#real" id="proxy" class="cat" data-box="box4"><div class="categorie"><h3>Mise en place reverse proxy</h3></div></a>
-                <a href="#real" id="collabora" class="cat" data-box="box5"><div class="categorie"><h3>Mise en place collabora pour nextcloud</h3></div></a>
-                <a href="#real" id="presence" class="cat" data-box="box6"><div class="categorie"><h3>Presence en ligne de l'entreprise</h3></div></a>
+                <a href="#real" id="proxy" class="cat" data-box="box3"><div class="categorie"><h3>Mise en place reverse proxy</h3></div></a>
+                <a href="#real" id="collabora" class="cat" data-box="box4"><div class="categorie"><h3>Mise en place collabora pour nextcloud</h3></div></a>
+                <a href="#real" id="presence" class="cat" data-box="box5"><div class="categorie"><h3>Presence en ligne de l'entreprise</h3></div></a>
             </div>
                 <div id="box1" class="content-box">
                     <div id="contenu1" class="basic-box">
@@ -100,37 +99,14 @@
                             <div style="display: flex;align-items: center;flex-direction: row; justify-content: space-between;width: 80%; margin: 0 10% ;">
                                 <img style="border-radius: 10px;width: 20%;" src="https://static-00.iconduck.com/assets.00/influxdb-icon-2017x2048-38lz5101.png">
                                 <div style="font-size: 1.2vw;margin: 0% 5%;">lors de la realisation de la collecte de données avec influxdb j'ai du utilisé telegraf qui est sont agent de collecte de données il possede beaucoup de presets de recuperation des données tel que base de données , serveur proxmox , serveur web , information system(ram,cpu,uptime,...) quand j'ai du le mettre en place j'ai du config l'adresse du serveur influxdb ainsi que les identifiant pour se connecté a la base de données cree selon le type de services</div>
-                                
-                                <div id="imageModal" class="modal" onclick="this.style.display='none'">
-                                    <img class="modal-content" id="expandedImg">
-                                </div>
-                                <style>
-                                    .modal {
-                                        display: none;
-                                        position: fixed;
-                                        z-index: 1000;
-                                        left: 0;
-                                        top: 0;
-                                        width: 100%;
-                                        height: 100%;
-                                        background-color: rgba(0,0,0,0.9);
-                                    }
-                                    .modal-content {
-                                        margin: auto;
-                                        display: block;
-                                        max-width: 90%;
-                                        max-height: 90%;
-                                    }
-                                </style>
-                                <script>
-                                    document.querySelector('img[src="Screenshot_162.png"]').onclick = function(){
-                                        document.getElementById('imageModal').style.display = "flex";
-                                        document.getElementById('expandedImg').src = this.src;
-                                    }
-                                </script>
-                                
-                                <!--<img style="border-radius: 10px;width: 20%;" src="Screenshot_162.png">-->
+                                <img style="border-radius: 10px;width: 20%;cursor: pointer;transition: transform 0.3s ease;" src="Screenshot_162.png" onclick="this.style.transform = this.style.transform === 'scale(3)' ? 'scale(1)' : 'scale(3)'">
                                 <img style="border-radius: 10px;width: 20%;" src="https://www.influxdata.com/wp-content/uploads/TelegrafTiger.png">
+                            </div>
+                            <div style="display: flex;align-items: center;flex-direction: row; justify-content: space-between;width: 80%; margin: 0 10% ;">
+                                <img style="border-radius: 10px;width: 20%;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Zabbix_logo_square.svg/2500px-Zabbix_logo_square.svg.png">
+                                <div style="font-size: 1.2vw;margin: 0% 5%;">nous avons utilisé zabbix dans le but de recuperé les information du reseau sur les appereil physique tel que switch et routeur et aussi quelque autre machine la configuration de la recuperation des metrics zabbix s'effectue avec le zabbix agent et/ou les requetes snmp</div>
+                                <img style="border-radius: 10px;width: 20%;cursor: pointer;transition: transform 0.3s ease;" src="https://ubunlog.com/wp-content/uploads/2020/10/zabbix-1024x532.jpg.webp" onclick="this.style.transform = this.style.transform === 'scale(3.5)' ? 'scale(1)' : 'scale(3.5)'">
+                                <img style="border-radius: 10px;width: 20%;cursor: pointer;transition: transform 0.3s ease;" src="https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/135224712/original/44e67031e13300a3df2c431d10cb0d51ed7cb7d3/create-zabbix-for-infrastructure-monitor.png" onclick="this.style.transform = this.style.transform === 'scale(4)' ? 'scale(1)' : 'scale(4)'">
                             </div>
                         </div>
                     </div>
@@ -144,11 +120,11 @@
 
                 <div id="box2" class="content-box">
                     <div id="contenu2" class="basic-box">
-                        <h2>Centralisation de logs</h2>
+                        <h2>Ajout d'enregistrement dns</h2>
                     </div>
                     
                     <div id="contenuAvancer2" class="detail-box">
-                        <h2>Centralisation de logs</h2>
+                        <h2>Ajout d'enregistrement dns</h2>
                     </div>
                     
                     <button class="detailButton" onclick="switchContenu(2)">
@@ -160,11 +136,11 @@
 
                 <div id="box3" class="content-box">
                     <div id="contenu3" class="basic-box">
-                        <h2>Ajout d'enregistrement dns</h2>
+                        <h2>Mise en place reverse proxy</h2>
                     </div>
                     
                     <div id="contenuAvancer3" class="detail-box">
-                        <h2>Ajout d'enregistrement dns</h2>
+                        <h2>Mise en place reverse proxy</h2>
                     </div>
                     
                     <button class="detailButton" onclick="switchContenu(3)">
@@ -176,11 +152,11 @@
 
                 <div id="box4" class="content-box">
                     <div id="contenu4" class="basic-box">
-                        <h2>Mise en place reverse proxy</h2>
+                        <h2>Mise en place collabora pour nextcloud</h2>
                     </div>
                     
                     <div id="contenuAvancer4" class="detail-box">
-                        <h2>Mise en place reverse proxy</h2>
+                        <h2>Mise en place collabora pour nextcloud</h2>
                     </div>
                     
                     <button class="detailButton" onclick="switchContenu(4)">
@@ -192,11 +168,11 @@
 
                 <div id="box5" class="content-box">
                     <div id="contenu5" class="basic-box">
-                        <h2>Mise en place collabora pour nextcloud</h2>
+                        <h2>Presence en ligne de l'entreprise</h2>
                     </div>
                     
                     <div id="contenuAvancer5" class="detail-box">
-                        <h2>Mise en place collabora pour nextcloud</h2>
+                        <h2>Presence en ligne de l'entreprise</h2>
                     </div>
                     
                     <button class="detailButton" onclick="switchContenu(5)">
