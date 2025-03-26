@@ -78,18 +78,63 @@
                 <a href="#real" id="collabora" class="cat" data-box="box5"><div class="categorie"><h3>Mise en place collabora pour nextcloud</h3></div></a>
                 <a href="#real" id="presence" class="cat" data-box="box6"><div class="categorie"><h3>Presence en ligne de l'entreprise</h3></div></a>
             </div>
-
                 <div id="box1" class="content-box">
                     <div id="contenu1" class="basic-box">
-                        <h2>Mise en place supervision</h2>
-                        
+                        <div style="text-align: center;"><h2>Mise en place supervision</h2>
+                            <div style="display: flex;align-items: center;flex-direction: row; justify-content: space-between;">
+                                <img style="border-radius: 1000px;margin-left: 5%;" src="https://media.istockphoto.com/id/690772190/fr/vectoriel/concept-de-grand-frère-œil-électronique-technologies-pour-la-surveillance-mondiale.jpg?s=612x612&w=0&k=20&c=oWYeSOmLzkKrbGcedAMjH_honGwqPjYAO-fXZNwMEjA=">
+                                <div style="font-size: 1.2vw;margin: 0% 5%;">La surpervision permet de collecté et d'analysé des données relatives à la performance, à la disponibilité et à la sécurité d'un système d'information . Durant mon stages j'ai parcouru differente solution de supervision telle que zabbix , influxdb , wazuh , metrics snmp . chaque solution avaient sont lot d'avantage et d'inconveninant c'est donc pour cela qu'on a du testé chaqu'une des solution pour choisir celle qui serais la plus diversifié pour aller avec un maximum de serveur de l'infrastructure malgré que pour certaines tache comme la securité ont a gardé wazuh et pour les appareils snmp telle que des switch nous avons garder zabbix sinon la solution final qui offré une bonne diversité etais influxdb qui a etait mis en forme avec des dashboards grafana</div>
+                            </div>
+                            <div style="display: flex;align-items: center;flex-direction: row; justify-content: space-between;width: 90%; margin: 0 5% ;">
+                                <img style="border-radius: 10px;width: 20%;" src="https://static-00.iconduck.com/assets.00/influxdb-icon-2017x2048-38lz5101.png">
+                                <img style="border-radius: 10px;width: 20%;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Zabbix_logo_square.svg/2500px-Zabbix_logo_square.svg.png">
+                                <img style="border-radius: 10px;width: 20%;" src="https://media.licdn.com/dms/image/D4D12AQGZmmN3Duq3xA/article-cover_image-shrink_600_2000/0/1722798775568?e=2147483647&v=beta&t=HIrFy2JoTqpdkqKHJ14w2iuqm0to5_u0T4WUTxT1okI">
+                                <img style="border-radius: 10px;width: 20%;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Grafana_logo.svg/1200px-Grafana_logo.svg.png">
+                            </div>
+                        </div>
                     </div>
                     
                     <div id="contenuAvancer1" class="detail-box">
-                        <h2>Mise en place supervisions</h2>
-
+                        <div style="text-align: center;"><h2>Mise en place supervisions</h2></div>
+                        <div style="display: flex;align-items: center;flex-direction: column;">
+                            <div style="display: flex;align-items: center;flex-direction: row; justify-content: space-between;width: 80%; margin: 0 10% ;">
+                                <img style="border-radius: 10px;width: 20%;" src="https://static-00.iconduck.com/assets.00/influxdb-icon-2017x2048-38lz5101.png">
+                                <div style="font-size: 1.2vw;margin: 0% 5%;">lors de la realisation de la collecte de données avec influxdb j'ai du utilisé telegraf qui est sont agent de collecte de données il possede beaucoup de presets de recuperation des données tel que base de données , serveur proxmox , serveur web , information system(ram,cpu,uptime,...) quand j'ai du le mettre en place j'ai du config l'adresse du serveur influxdb ainsi que les identifiant pour se connecté a la base de données cree selon le type de services</div>
+                                
+                                <div id="imageModal" class="modal" onclick="this.style.display='none'">
+                                    <img class="modal-content" id="expandedImg">
+                                </div>
+                                <style>
+                                    .modal {
+                                        display: none;
+                                        position: fixed;
+                                        z-index: 1000;
+                                        left: 0;
+                                        top: 0;
+                                        width: 100%;
+                                        height: 100%;
+                                        background-color: rgba(0,0,0,0.9);
+                                    }
+                                    .modal-content {
+                                        margin: auto;
+                                        display: block;
+                                        max-width: 90%;
+                                        max-height: 90%;
+                                    }
+                                </style>
+                                <script>
+                                    document.querySelector('img[src="Screenshot_162.png"]').onclick = function(){
+                                        document.getElementById('imageModal').style.display = "flex";
+                                        document.getElementById('expandedImg').src = this.src;
+                                    }
+                                </script>
+                                
+                                <!--<img style="border-radius: 10px;width: 20%;" src="Screenshot_162.png">-->
+                                <img style="border-radius: 10px;width: 20%;" src="https://www.influxdata.com/wp-content/uploads/TelegrafTiger.png">
+                            </div>
+                        </div>
                     </div>
-                
+
                     <button class="detailButton" onclick="switchContenu(1)">
                         <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -203,13 +248,22 @@
         function switchContenu(numeroContenu){
                             var contenu = document.getElementById("contenu" + numeroContenu);
                             var contenuAvancer = document.getElementById("contenuAvancer" + numeroContenu);
+                            contenu.style.opacity = "0";
+                            contenuAvancer.style.opacity = "0";
 
+                            // Use setTimeout to ensure opacity transition works
+                            setTimeout(() => {
+                                contenu.style.opacity = "1";
+                                contenuAvancer.style.opacity = "1";
+                            }, 50);
                             if (contenu.style.display === "none") {
                                 contenu.style.display = "block";
+                                contenu.style.transition = "all 0.5s";
                                 contenuAvancer.style.display = "none";
                             } else {
                                 contenu.style.display = "none";
                                 contenuAvancer.style.display = "block";
+                                contenuAvancer.style.transition = "all 0.5s";
                             }
                         }
 
